@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/breadcrumbs.css')); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/aboutUs.css')); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/professorSection.css')); ?>">
-
 <?php
 
   get_header();
@@ -69,14 +68,58 @@
     </div>
     </section>
     <section>
-      <div class="professorSection">
+    <div class="professorSection">
         <div class="about-us-button-title">中心成員</div>
-        
-        <div class="professorSectionMore">
-            <a href="#">更多成員 →</a>
-        </div>
+        <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+            $homepageProfessors = new WP_Query(array(
+                'post_type' => 'professor',
+                'paged' => $paged,
+                'posts_per_page' => 3,
+                'meta_key' => 'professor_id',
+                'orderby' => 'meta_value_num',
+                'order' => 'ASC',
+            ));
+
+            if ($homepageProfessors->have_posts()) { ?>
+                <div class="professorSectionContainer">
+                <?php while ($homepageProfessors->have_posts()) {
+                $homepageProfessors->the_post(); 
+                $professorImage = get_field('professor_image');
+                $professorTitle = get_field('title');
+                $professorPhoneNumber = get_field('phone_number');
+                $professorEmail = get_field('email');
+                $imageUri = $professorImage ? get_theme_file_uri('/images/' . esc_attr($professorImage)) : get_theme_file_uri('/images/semfjuBuilding.png'); 
+                ?>                    
+                <div class="professorSectionCard">
+                    <div class="professorSectionImage">
+                        <img src="<?php echo esc_url($imageUri); ?>" alt="<?php esc_attr(the_title()); ?>">
+                    </div>
+                    <div class="professorSectionText">
+                        <h3><?php the_title(); ?></h3>
+                        <h4><?php echo $professorTitle; ?></h4>
+                        <div class="content"><?php the_content(); ?></div>
+                        <div class="contact-information">
+                            <img src="<?php echo get_theme_file_uri('/images/phone.png') ?>" alt="phone"/>
+                            <span class="contact-information-text"><?php echo $professorPhoneNumber; ?></span>
+                        </div>
+                        <div class="contact-information">
+                            <img src="<?php echo get_theme_file_uri('/images/mail.png') ?>" alt="phone"/>
+                            <span class="contact-information-text"><?php echo $professorEmail; ?></span>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+            <div class="professorSectionMore">
+            <a href="#">更多成員 →</a>
+            </div>
+        <?php } ?>
+
+    </div>
     </section>
+
 
     <script>
         document.querySelectorAll('.about-us-service-button').forEach(button => {
