@@ -1,0 +1,98 @@
+.professorSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+  
+.professorSubSectionTitle {
+    text-align: left;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 1000;
+    color: #757575;
+}
+
+  .professorCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  } 
+  
+  .professorCard {
+    flex: 0 1 calc(25% - 20px);
+    border: 1px solid #1f6662;
+    border-radius: 10px; 
+    overflow: visible; 
+    width: 180px;
+    margin: 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .professorCard img {
+    width: calc(100% + 2px); 
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    position: absolute; 
+    top: -1px; 
+    left: -1px; 
+    z-index: 1;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; 
+  }
+   
+  
+  .professorCardContent {
+    position: relative; 
+    padding: 10px;
+    z-index: 2;
+    margin-top: 220px; 
+  }
+  
+  .professorCardTitle {
+    text-align: left;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    line-height: 1.5; 
+    color: #1f6662;
+  }
+  
+  .professorCardDate {
+    font-size: 16px;
+    color: #1f6662;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .professorCardContentContainer{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 10px; 
+  }
+
+  .professorCardLink {
+    text-decoration: none;
+    color: #1f6662;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .professorSectionMore {
+    text-align: right;
+    margin: 20px 0px; 
+  }
+  
+  .professorSectionMore a {
+    text-decoration: none;
+    color: #1f6662;
+    font-weight: 700;
+    font-size: 18px;
+  }

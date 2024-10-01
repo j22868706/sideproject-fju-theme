@@ -1,0 +1,60 @@
+.footer {
+    background-color: #8e4e4e;
+    color: white;
+    padding: 10px 20px;
+    height: 160px;
+}
+  
+  .footerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers items vertically */
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 150px;
+
+  }
+  
+  .copyright {
+    font-size: 18px;
+  }
+  
+  .footerNav {
+    display: flex;
+    align-items: center; /* Align nav links vertically */
+    margin-left: 80px;
+
+  }
+  
+  .footerNav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  
+  .footerNav a:hover {
+    text-decoration: none;
+  }
+  
+  .socialIcons {
+    display: flex;
+    align-items: center;
+  }
+
+  .socialIcon {
+    display: inline-block; /* Ensure the link behaves like an inline block */
+    width: 40px; /* Set width to your preferred size */
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; /* Set height to your preferred size */
+}
+
+  .socialIcon img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}

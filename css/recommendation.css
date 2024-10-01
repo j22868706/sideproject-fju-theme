@@ -1,0 +1,66 @@
+.recommendationContainer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    background-color: #add2d4;
+  }
+  
+  .recommendationTitle {
+    font-size: 55px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    font-weight: 1000;
+    color: #1f6662;
+    text-align: center; 
+  }
+
+  
+  .videoContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* 影片之間的間距 */
+    margin-bottom: 80px;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    flex: 1;
+    max-width: 600px; /* 設置每個影片的最大寬度 */
+  }
+  
+  .video {
+    width: 100%;
+    height: 500px; /* 設置影片高度 */
+    border-radius: 30px; /* 圓角邊框 */
+    background-color: white;
+    overflow: hidden; /* 確保圓角邊框效果 */
+    border: none; /* 去除任何邊框 */
+  
+  
+  }
+  
+  /* 播放鍵樣式 */
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .playButton::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid white; 
+    border-radius: 5px;
+  }

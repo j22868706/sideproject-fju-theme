@@ -1,23 +1,34 @@
+<link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/event.css'); ?>">
+<link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/breadcrumbs.css'); ?>">
+
+
+
 <?php 
     get_header();
     while (have_posts()) {
-        the_post(); ?>
-            <div class="page-banner">
-                <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);"></div>
-                <div class="page-banner__content container container--narrow">
-                    <h1 class="page-banner__title"><?php the_title(); ?></h1>
-                    <div class="page-banner__intro">
-                        <p>DONT FORGET TO REPLACE ME LATER</p>
-                    </div>
-                </div>  
+        the_post();
+        $eventCategory = get_field('event_category');
+        ?>
+        <nav class="breadcrumbs">
+            <a href="<?php echo site_url() ?>">
+                <span class="home-icon">
+                <img src="<?php echo get_theme_file_uri('/images/home.png'); ?>" alt="<?php echo get_bloginfo('name'); ?>" />
+                </span>
+            </a>
+            <span class="breadcrumbsSeparator">></span>
+            <span class="current">最新消息</span>
+        </nav>
+        <div class="eventContainer">
+            <div class="event-card-title">
+                <span class="event-card-category"><?php echo $eventCategory; ?></span>
+                <span class="event-card-name"><?php the_title(); ?></span>
             </div>
-
-            <div class="container container--narrow page-section">
-                <div class="metabox metabox--position-up metabox--with-home-link">
-                    <p><a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('event'); ?>"><i class="fa fa-home" aria-hidden="true"></i>Events Home</a> <span class="metabox__main"><?php the_title(); ?></span></p>
-                </div>
-                <div class="generic-content"><?php the_content(); ?></div>
+            <div class="author-info">
+                <img src="<?php echo get_theme_file_uri('/images/man.png')?>" alt="Speaker" class="author-image">
+                <span class="author-name"><?php the_author();?> </span>
             </div>
+            <div><?php the_content(); ?></div>
+        </div>
 
 <?php }
 

@@ -1,0 +1,73 @@
+.admissionContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.admissionHeader {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 1000;
+    color: #1f6662;
+    text-align: left; 
+}
+
+.admissionHashtag {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: left; 
+    text-decoration: underline;
+}
+
+.admissionText {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left; /* Align text to the left */
+}
+
+.admissionImage {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 10px;
+}
+
+.admissionList {
+    font-size: 1.1rem;
+    color: black;
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: left; /* Align text to the left */
+    line-height: 2;
+}
+
+.admissionContactInfo {
+    font-size: 1.1rem;
+    color: black;
+    text-align: left; /* Align text to the left */
+}
+
+.admissionContact {
+    font-size: 1.1rem;
+    color: black;
+    text-align: left; /* Align text to the left */
+}
+  
+  .admissionContact p {
+    line-height: 1
+}
+  
+.admissionContact a {
+  color: black;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.admissionContact a:hover {
+  text-decoration: underline;
+}

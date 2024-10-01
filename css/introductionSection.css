@@ -1,0 +1,58 @@
+
+  .imageContainer {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image {
+    width: 100%; /* 使圖片寬度填滿容器 */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 10px; /* 圓角邊框 */
+  }
+  
+  .textContainer {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .introTitle {
+    font-size: 55px;
+    margin-bottom: 40px;
+    font-weight: 1000;
+    color: #1f6662;
+    text-align: left; 
+  }
+
+  .description {
+    font-size: 20px;
+    color: #a9a9a9; 
+    line-height: 1.5; 
+    margin-bottom: 20px;
+    text-align: left; 
+  }
+  
+  
+  
+  .buttonContainer {
+    display: flex;
+    gap: 25px; /* 按鈕間距 */
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1f6662; /* 按鈕背景色 */
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: white; 
+    color: #1f6662;
+    border: 2px solid  #1f6662; 
+
+  }
+  

@@ -1,0 +1,30 @@
+.breadcrumbs {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 0;
+    margin-left: 40px;
+}
+
+.breadcrumbs a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: none;
+}
+
+.breadcrumbs .breadcrumbsSeparator {
+    margin: 0 15px;
+}
+
+.breadcrumbs .current {
+    font-weight: bold;
+}
+
+.home-icon img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}

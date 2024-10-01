@@ -1,0 +1,74 @@
+.communityContainer {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .communityTextContainer {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .communityTitle {
+    font-size: 55px;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    font-weight: 1000;
+    color: #1f6662;
+    text-align: center; 
+  }
+  
+  .communityDescription {
+    font-size: 18px;
+    color: #a9a9a9;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left; 
+  }
+  
+  .communityButtonContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .communityButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1f6662;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .communityButton:hover {
+    background-color: white;
+    color: #1f6662;
+    border: 2px solid #1f6662;
+  }
+  
+  .communityImageGrid {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr); /* Adjust columns based on space */
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .communityImageContainer {
+    width: 100%;
+    height: auto;
+  }
+  
+  .communityImage {
+    width: 140px;
+    height: 140px;
+    border-radius: none;
+    box-shadow: none; 
+    background-color: transparent; 
+    border: none; 
+  }
