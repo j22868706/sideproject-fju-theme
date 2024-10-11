@@ -1,0 +1,33 @@
+.news-container {
+    width: 900px;
+    margin: auto;
+}
+
+.news-title {
+    font-size: 38px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: 1000;
+    color: #1f6662;
+    text-align: left; 
+}
+
+.news-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1f6662;
+    text-align: left; 
+}
+
+.news-content {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.news-img {
+    display: block;  
+    margin: 50px auto; 
+    width: 800px;
+}

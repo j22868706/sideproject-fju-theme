@@ -3,6 +3,8 @@ get_header(); ?>
 
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/breadcrumbs.css')); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/latestNews.css')); ?>">
+<link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/buttons.css')); ?>">
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

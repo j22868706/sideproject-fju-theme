@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/recommendation.css'); ?>">
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/latestNews.css'); ?>">    
     <link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/community.css'); ?>">
-
-
-
+    <link rel="stylesheet" href="<?php echo get_theme_file_uri('/css/buttons.css'); ?>">
 
 
 </head>

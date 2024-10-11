@@ -113,7 +113,7 @@
                 <?php } ?>
             </div>
             <div class="professorSectionMore">
-            <a href="#">更多成員 →</a>
+            <a href="<?php echo site_url('/professor') ?>">更多成員 →</a>
             </div>
         <?php } ?>
 
