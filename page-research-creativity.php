@@ -4,56 +4,8 @@ get_header(); ?>
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/breadcrumbs.css')); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/latestNews.css')); ?>">
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/buttons.css')); ?>">
-<style>
+<link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/researchCreativity.css')); ?>">
 
-.research-creativity-title {
-  color: #1f6662;
-  text-align: left;
-  padding-left: 100px;
-  font-size: 36px;
-  font-weight: 700
-}
-.research-creativity-news-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 50px auto;
-  width: 1250px;
-
-}
-.research-creativity-news-card {
-  position: relative;
-  width: 600px;
-  margin: 30px 0;
-}
-.research-creativity-news-image {
-  width: 100%;
-  display: block;
-}
-.research-creativity-news-content {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 150px;
-  background-color: white;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.research-creativity-news-title {
-  font-size: 16px;
-  color: #1f6662;
-  margin: 0 0 10px 0;
-  text-align: center;
-}
-
-.research-creativity-news-description {
-  font-size: 12px;
-  color: #999;
-  margin: 0;
-}
-    </style>
 
 <nav class="breadcrumbs">
   <a href="<?php echo esc_url(site_url()); ?>">
@@ -100,10 +52,63 @@ if ($homepageNews->have_posts()) { ?>
 
 wp_reset_postdata(); 
 ?>
+    <h1 class="research-creativity-title">最新碩士論文</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>論文出版年</th>
+                <th>研究生姓名</th>
+                <th>碩士/碩專</th>
+                <th>論文名稱</th>
+                <th>指導教授</th>
+            </tr>
+        </thead>
+        <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+        $homepagePapers = new WP_Query(array(
+            'post_type' => 'paper',
+            'paged' => $paged,
+            'posts_per_page' => 4,
+            'meta_key' => 'publish_year',
+            'orderby' => 'meta_value_num',
+            'order' => 'ASC',
+        ));
 
+        if ($homepagePapers->have_posts()) : ?>
+            <tbody>
+                <?php while ($homepagePapers->have_posts()) : $homepagePapers->the_post();
+                    $publishYear = get_field('publish_year');
+                    $authorEnglish = get_field('author_english');
+                    $authorMandarin = get_field('author_mandarin');
+                    $degree = get_field('degree');
+                    $paperName = get_field('paper_name');
+                    $professorName1 = get_field('professor_name1');
+                    $professorName2 = get_field('professor_name2');
+                ?>
+                    <tr>
+                        <td><?php echo esc_html($publishYear); ?></td>
+                        <td><?php echo esc_html($authorMandarin); ?><br><?php echo esc_html($authorEnglish); ?></td>
+                        <td><?php echo esc_html($degree); ?></td>
+                        <td class="paper-title"><?php the_title(); ?><br><?php echo esc_html($paperName); ?></td>
+                        <td>
+                            <?php echo esc_html($professorName1);
+                            if (!empty($professorName2)) :
+                                echo '<br>' . esc_html($professorName2);
+                            endif; ?>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        <?php endif; ?>
+    </table>
+    <div class="paperButtonContainer">
+    <a href="<?php echo esc_url(site_url('/paper')) ?>" class="paperButton">查看所有碩士論文</a>
+    </div>
+
+    <?php wp_reset_postdata(); ?>
+
+</div>
 
   
-<?php 
-get_footer();
-?>
+<?php get_footer(); ?>

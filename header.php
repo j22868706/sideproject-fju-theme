@@ -43,11 +43,11 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">成果紀錄 ▼</a>
+                <a href="<?php echo site_url('/research-creativity') ?>">成果紀錄 ▼</a>
                 <div class="dropdown-content">
-                    <a href="#">精彩新聞</a>
+                    <a href="<?php echo site_url('/research-creativity') ?>">精彩新聞</a>
                     <div class="separator"></div>
-                    <a href="#">碩士論文</a>
+                    <a href="<?php echo site_url('/research-creativity') ?>">碩士論文</a>
                 </div>
             </div>
             <a href="<?php echo site_url('/latest-news') ?>">最新消息</a>
