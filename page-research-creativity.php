@@ -72,7 +72,7 @@ wp_reset_postdata();
             'posts_per_page' => 4,
             'meta_key' => 'publish_year',
             'orderby' => 'meta_value_num',
-            'order' => 'ASC',
+            'order' => 'DESC',
         ));
 
         if ($homepagePapers->have_posts()) : ?>
