@@ -17,19 +17,14 @@
     <img src="<?php echo get_theme_file_uri('/images/social-enterprise.png') ?>" alt="social enterprise" class="social-enterprise-image" />
 </section>
 <section>
-<div class="testimonials-container">
-        <h1 class="testimonials-title">2022 社企永續聚落成員</h1>
-        <div class="testimonials-slider">
-            <?php
-            // PHP code will be added here to generate testimonials
-            ?>
-        </div>
-        <div class="slider-controls">
-            <?php
-            // PHP code will be added here to generate slider dots
-            ?>
-        </div>
-    </div>
+<div class="testimonials-section-container">
+  <div class="testimonial-section">
+    <span class="subtitle">Testimonials</span>
+    <h2>2022 社企永續聚落成員</h2>
+  </div>
+</div>
+
+
 </section>
 
 
