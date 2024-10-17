@@ -9,54 +9,154 @@
 }
 
 .social-enterprise-image {
-    width: 100%;
+  width: 100%;
 }
 
-/* Container Styling */
 .testimonials-section-container {
-    width: 1600px;
-    margin: 0 auto;
-  }
+  width: calc(100%-18px);
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-section {
+  text-align: left;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
   
-  /* General Styling */
-  .testimonial-section {
-    text-align: left;
-    padding: 50px;
-    font-family: Arial, sans-serif;
-  }
+.subtitle {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
   
-  /* Subtitle Styling */
-  .subtitle {
-    font-size: 0.8rem;
-    color: #b0b0b0;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 5px;
-  }
+.testimonial-section h2 {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #1f6662;
+  font-size: 36px;
+  font-weight: 700
+}
   
-  /* Main Heading Styling */
-  .testimonial-section h2 {
-    margin: 0;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
+.testimonial-section h2::before {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 1px;
+  background-color: #a2d5a6;
+  position: absolute;
+  top: -3px;
+  left: 48%;
+  transform: translateX(-50%) translateY(-10px);
+}
+  
+.carousel-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  gap: 50px;
+  margin: 30px auto;
+}
+
+.carousel-card {
+  position: relative;
+  margin: 0 auto;
+  min-width: 400px;
+  padding: 20px 20px 20px 120px; 
+  background: white;
+  border: 1px solid #ccc;
+  flex: 0 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-logo {
+  position: absolute;
+  left: -50px; 
+  top: 20px;
+  width: 150px;
+}
+
+.carousel-logo img {
+  width: 100%;
+  height: auto;   
+  display: block;
+}
+
+.carousel-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-card-header {
+    margin-bottom: 15px;
+}
+
+.carousel-company-name {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #1f6662;
+  font-size: 24px;
+  font-weight: 700
+}
+
+.carousel-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carousel-info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: #1f6662;
-    font-size: 36px;
-    font-weight: 700
   }
-  
-  /* Underline Styling */
-  .testimonial-section h2::before {
-    content: "";
-    display: block;
-    width: 30%;
-    height: 1px;
-    background-color: #a2d5a6;
-    position: absolute;
-    top: -3px;
-    left: 48%;
-    transform: translateX(-50%) translateY(-10px);
-  }
-  
+
+.carousel-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1f6662; 
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.carousel-button:hover {
+  background-color: white; 
+  color: #1f6662;
+  border: 2px solid  #1f6662; 
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: #4CAF50;
+}
