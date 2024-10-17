@@ -35,11 +35,11 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">社企永續聚落 ▼</a>
+                <a href="<?php echo site_url('/social-enterprise') ?>">社企永續聚落 ▼</a>
                 <div class="dropdown-content">
-                    <a href="#">遠起與宗旨</a>
+                    <a href="<?php echo site_url('/social-enterprise') ?>">遠起與宗旨</a>
                     <div class="separator"></div>
-                    <a href="#">社企聚落成員</a>
+                    <a href="<?php echo site_url('/social-enterprise') ?>">社企聚落成員</a>
                 </div>
             </div>
             <div class="dropdown">
