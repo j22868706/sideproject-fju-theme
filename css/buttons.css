@@ -27,7 +27,7 @@
   
 .buttonContainer {
     display: flex;
-    gap: 25px; /* 按鈕間距 */
+    gap: 25px; 
   }
   
   .button {
@@ -36,7 +36,7 @@
     font-size: 16px;
     text-decoration: none;
     color: #fff;
-    background-color: #1f6662; /* 按鈕背景色 */
+    background-color: #1f6662; 
     border-radius: 20px;
     transition: background-color 0.3s;
   }

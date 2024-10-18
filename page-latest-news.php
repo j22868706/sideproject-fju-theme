@@ -43,7 +43,6 @@ get_header(); ?>
       $today = date('Ymd');
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Get the current page or set to 1 if not available
       
-      // WP_Query to fetch events
       $homepageEvents = new WP_Query(array(
         'posts_per_page' => 8,
         'post_type' => 'event',
@@ -69,10 +68,9 @@ get_header(); ?>
           $eventDate = new DateTime(get_field('event_date'));
           $eventImage = get_field('event_image');
 
-          // Determine the image URI
           $imageUri = $eventImage ? get_theme_file_uri('/images/' . esc_attr($eventImage)) : get_theme_file_uri('/images/semfjuBuilding.png'); 
           ?>
-          <div class="newsCard"> <!-- Each news card starts here -->
+          <div class="newsCard"> 
             <img src="<?php echo esc_url($imageUri); ?>" alt="<?php esc_attr(the_title()); ?>">
             <div class="newsCardContent">
               <div class="newsCardTitle"><?php the_title(); ?></div>
@@ -89,7 +87,7 @@ get_header(); ?>
         <?php
           $current_page = max(1, get_query_var('paged')); 
 
-          if ($homepageEvents->max_num_pages > 1) { // Check if there are multiple pages
+          if ($homepageEvents->max_num_pages > 1) {
             $prev_disabled = $current_page <= 1 ? 'disabled' : '';
             $next_disabled = $current_page >= $homepageEvents->max_num_pages ? 'disabled' : '';
         ?>
@@ -106,7 +104,7 @@ get_header(); ?>
         </div>
       <?php
       } else {
-        echo '<p>No events found.</p>'; // Display a message if no events are found
+        echo '<p>No events found.</p>'; 
       }
     ?>
   <?php

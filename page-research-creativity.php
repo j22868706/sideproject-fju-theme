@@ -33,7 +33,7 @@ if ($homepageNews->have_posts()) { ?>
     <div class="research-creativity-news-container">
     <?php 
     while ($homepageNews->have_posts()) {
-        $homepageNews->the_post(); // 修正變數名稱為 $homepageNews
+        $homepageNews->the_post(); 
         $newsImage = get_field('news_img');
         $imageUri = $newsImage ? get_theme_file_uri('/images/' . esc_attr($newsImage)) : get_theme_file_uri('/images/semfjuBuilding.png'); 
         ?>                    
