@@ -72,7 +72,7 @@
                       <span><?php echo $contactEmail ?></span>
                     </div>
                   </div>
-                  <a href="#" class="carousel-button">查看聯絡手冊</a>
+                  <a id="handbookButton"  href="#" class="carousel-button">查看聚落手冊</a>
                 </div>
               </div>
             <?php endwhile; ?>
@@ -80,15 +80,16 @@
         <?php endif; 
         wp_reset_postdata(); 
         ?>
-
         <div class="carousel-dots">
           <?php for ($i = 0; $i < $homepageMembers->found_posts / 2; $i++) : ?>
             <span class="carousel-dot <?php echo ($i === 0) ? 'active' : ''; ?>"></span>
           <?php endfor; ?>
         </div>
-
-
-
+        <div id="handbookModal" class="modal">
+          <div class="modal-content">
+            <div id="modalContent"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

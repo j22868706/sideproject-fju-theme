@@ -6,3 +6,4 @@ function university_files() {
 
 add_filter('show_admin_bar', '__return_false');
 add_action('wp_enqueue_scripts', 'university_files');
+require_once get_theme_file_path('/ajax-handbook.php');

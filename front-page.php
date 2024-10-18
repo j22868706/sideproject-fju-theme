@@ -10,7 +10,7 @@
         <p class="description">本中心以促進社會創新創業、發展社企共好圈、培養具利他精神勇於開創新局之人才為宗旨，透過句對話與反思、整合與創新、視野與領導的教育實踐，為更美好的社會貢獻一份心力。</p>
         <div class="buttonContainer">
           <a href="<?php echo site_url('/admission') ?>" class="button">了解招生資訊</a>
-          <a href="#button2" class="button">本中心介紹</a>
+          <a href="<?php echo site_url('/about-us') ?>" class="button">本中心介紹</a>
         </div>
       </div>
   </section>
@@ -100,7 +100,7 @@
           「社企永續聚落」的宗旨是促進社企精神與食物的分享交流與串連，現在有各式各樣的聚落成員，邀情您一同加入。
         </p>
         <div class="communityButtonContainer">
-          <a href="#button1" class="communityButton">查看更多</a>
+          <a href="<?php echo site_url('/social-enterprise') ?>" class="communityButton">查看更多</a>
         </div>
       </div>
       <div class="communityImageGrid">

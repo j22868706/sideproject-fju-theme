@@ -49,6 +49,31 @@
                 </p>
             </div>   
         </div>
+        <section class=recommendationContainer>
+      <h2 class=recommendationTitle>畢業生推薦</h2>
+      <div class=videoContainer>
+        <div class="videoWrapper">
+          <div class="playButton"></div>
+          <iframe
+            src=""
+            title=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            class="video"
+          ></iframe>
+        </div>
+        <div class="videoWrapper">
+          <div class="playButton"></div>
+          <iframe
+            src=""
+            title=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            class="video"
+          ></iframe>
+        </div>  
+      </div>
+    </section>
   <?php }
 
   get_footer();
